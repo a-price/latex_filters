@@ -1,0 +1,2 @@
+git config filter.sentencebreak.clean "perl -pe \"s/[.]*?(\\?|\\!|\\.|'') /$&%NL%\\n/g unless m/%/||m/^[\\ *\\\\\\]/\""
+git config filter.sentencebreak.smudge "perl -pe \"s/%NL%\n//gm\""
